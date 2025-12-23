@@ -30,19 +30,6 @@ const fields = [{
   placeholder: 'Enter your password'
 }]
 
-const providers = [{
-  label: 'Google',
-  icon: 'i-simple-icons-google',
-  onClick: () => {
-    toast.add({ title: 'Google', description: 'Login with Google' })
-  }
-}, {
-  label: 'GitHub',
-  icon: 'i-simple-icons-github',
-  onClick: () => {
-    toast.add({ title: 'GitHub', description: 'Login with GitHub' })
-  }
-}]
 
 const schema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -52,8 +39,22 @@ const schema = z.object({
 
 type Schema = z.output<typeof schema>
 
+const userState = useState('user')
+
 function onSubmit(payload: FormSubmitEvent<Schema>) {
-  console.log('Submitted', payload)
+  userState.value = {
+    name: payload.data.name,
+    email: payload.data.email,
+    password: payload.data.password
+  }
+
+  toast.add({
+    title: 'Signed Up Successfully!',
+    description: `Redirecting to calculate your health`,
+    color: 'success'
+  })
+
+  navigateTo('/')
 }
 </script>
 
@@ -61,7 +62,6 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
   <UAuthForm
     :fields="fields"
     :schema="schema"
-    :providers="providers"
     title="Create an account"
     :submit="{ label: 'Create account' }"
     @submit="onSubmit"
@@ -69,14 +69,14 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
     <template #description>
       Already have an account? <ULink
         to="/login"
-        class="text-primary font-medium"
+        class="font-medium text-primary"
       >Login</ULink>.
     </template>
 
     <template #footer>
       By signing up, you agree to our <ULink
         to="/"
-        class="text-primary font-medium"
+        class="font-medium text-primary"
       >Terms of Service</ULink>.
     </template>
   </UAuthForm>

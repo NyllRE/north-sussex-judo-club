@@ -1,70 +1,90 @@
 <script setup lang="ts">
-const route = useRoute()
+const items = computed(() => [
+  {
+    label: "Home",
+    to: "/",
+  },
+  {
+    label: "Classes",
+    to: "/classes",
+  },
+  {
+    label: "Pricing",
+    to: "/pricing",
+  },
+]);
 
-const items = computed(() => [{
-  label: 'Docs',
-  to: '/docs',
-  active: route.path.startsWith('/docs')
-}, {
-  label: 'Pricing',
-  to: '/pricing'
-}, {
-  label: 'Blog',
-  to: '/blog'
-}, {
-  label: 'Changelog',
-  to: '/changelog'
-}])
+const user = useState<{ name: string; email: string; password: string }>(
+  "user",
+);
+const userListItems = [
+  { label: "settings", icon: "i-lucide-settings" },
+  { label: "logout", icon: "i-lucide-log-out", onSelect: () => (user.value = null) },
+];
 </script>
 
 <template>
-  <UHeader>
-    <template #left>
+  <UHeader title="NSJC">
+    <!-- <template #left>
       <NuxtLink to="/">
         <AppLogo class="w-auto h-6 shrink-0" />
       </NuxtLink>
       <TemplateMenu />
-    </template>
+    </template> -->
 
-    <UNavigationMenu
-      :items="items"
-      variant="link"
-    />
+    <UNavigationMenu :items="items" variant="link" />
 
     <template #right>
       <UColorModeButton />
 
-      <UButton
-        icon="i-lucide-log-in"
-        color="neutral"
-        variant="ghost"
-        to="/login"
-        class="lg:hidden"
-      />
+      <template v-if="!user">
+        <UButton
+          icon="i-lucide-log-in"
+          color="neutral"
+          variant="ghost"
+          to="/login"
+          class="lg:hidden"
+        />
 
-      <UButton
-        label="Sign in"
-        color="neutral"
-        variant="outline"
-        to="/login"
-        class="hidden lg:inline-flex"
-      />
+        <UButton
+          label="Sign in"
+          color="neutral"
+          variant="outline"
+          to="/login"
+          class="hidden lg:inline-flex"
+        />
 
-      <UButton
-        label="Sign up"
-        color="neutral"
-        trailing-icon="i-lucide-arrow-right"
-        class="hidden lg:inline-flex"
-        to="/signup"
-      />
+        <UButton
+          label="Sign up"
+          color="neutral"
+          trailing-icon="i-lucide-arrow-right"
+          class="hidden lg:inline-flex"
+          to="/signup"
+        />
+      </template>
+      <UDropdownMenu
+        v-else
+        :items="userListItems"
+        :content="{
+          align: 'end',
+          side: 'bottom',
+          sideOffset: 8,
+        }"
+        :ui="{
+          content: 'w-48',
+        }"
+      >
+        <UButton
+          :label="user.name"
+          icon="i-lucide-user"
+          color="neutral"
+          variant="outline"
+        />
+      </UDropdownMenu>
     </template>
 
     <template #body>
-      <UNavigationMenu
-        :items="items"
-        orientation="vertical"
-        class="-mx-2.5"
-      />
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
 
       <USeparator class="my-6" />
 
@@ -76,12 +96,7 @@ const items = computed(() => [{
         block
         class="mb-3"
       />
-      <UButton
-        label="Sign up"
-        color="neutral"
-        to="/signup"
-        block
-      />
+      <UButton label="Sign up" color="neutral" to="/signup" block />
     </template>
   </UHeader>
 </template>

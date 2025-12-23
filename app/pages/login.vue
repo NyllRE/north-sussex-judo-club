@@ -30,20 +30,6 @@ const fields = [{
   type: 'checkbox' as const
 }]
 
-const providers = [{
-  label: 'Google',
-  icon: 'i-simple-icons-google',
-  onClick: () => {
-    toast.add({ title: 'Google', description: 'Login with Google' })
-  }
-}, {
-  label: 'GitHub',
-  icon: 'i-simple-icons-github',
-  onClick: () => {
-    toast.add({ title: 'GitHub', description: 'Login with GitHub' })
-  }
-}]
-
 const schema = z.object({
   email: z.email('Invalid email'),
   password: z.string().min(8, 'Must be at least 8 characters')
@@ -60,7 +46,6 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
   <UAuthForm
     :fields="fields"
     :schema="schema"
-    :providers="providers"
     title="Welcome back"
     icon="i-lucide-lock"
     @submit="onSubmit"
@@ -68,14 +53,14 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
     <template #description>
       Don't have an account? <ULink
         to="/signup"
-        class="text-primary font-medium"
+        class="font-medium text-primary"
       >Sign up</ULink>.
     </template>
 
     <template #password-hint>
       <ULink
         to="/"
-        class="text-primary font-medium"
+        class="font-medium text-primary"
         tabindex="-1"
       >Forgot password?</ULink>
     </template>
@@ -83,7 +68,7 @@ function onSubmit(payload: FormSubmitEvent<Schema>) {
     <template #footer>
       By signing in, you agree to our <ULink
         to="/"
-        class="text-primary font-medium"
+        class="font-medium text-primary"
       >Terms of Service</ULink>.
     </template>
   </UAuthForm>

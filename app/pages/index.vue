@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import PriceList from '~/components/PriceList.vue'
+
 const { data: page } = await useAsyncData('index', () => queryCollection('index').first())
 
 const title = page.value?.seo?.title || page.value?.title
@@ -34,6 +36,11 @@ useSeoMeta({
       <PromotionalVideo />
     </UPageHero>
 
+
+    <UPageSection>
+      <PriceList />
+    </UPageSection>
+
     <UPageSection
       v-for="(section, index) in page.sections"
       :key="index"
@@ -43,9 +50,16 @@ useSeoMeta({
       :reverse="section.reverse"
       :features="section.features"
     >
-      <ImagePlaceholder />
+      <ImagePlaceholder>
+        <img
+          src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg"
+          alt="Section Image"
+          class="rounded-sm w-full h-full object-cover"
+        >
+      </ImagePlaceholder>
     </UPageSection>
 
+<!--
     <UPageSection
       :title="page.features.title"
       :description="page.features.description"
@@ -92,6 +106,6 @@ useSeoMeta({
       class="overflow-hidden"
     >
       <LazyStarsBg />
-    </UPageCTA>
+    </UPageCTA> -->
   </div>
 </template>
