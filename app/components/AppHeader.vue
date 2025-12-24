@@ -64,7 +64,7 @@ const userListItems = [
       </template>
       <UDropdownMenu
         v-else
-        :items="userListItems"
+        :items="userListItem"
         :content="{
           align: 'end',
           side: 'bottom',

@@ -1,0 +1,88 @@
+Date : 2025-12-24 01:38:09
+Directory : /home/nyll/Development/north-sussex-judo-club
+Total : 39 files,  11926 codes, 58 comments, 2840 blanks, all 14824 lines
+
+Languages
++--------------------+------------+------------+------------+------------+------------+
+| language           | files      | code       | comment    | blank      | total      |
++--------------------+------------+------------+------------+------------+------------+
+| YAML               |          4 |     10,102 |          0 |      2,597 |     12,699 |
+| Vue                |         26 |      1,525 |         54 |        197 |      1,776 |
+| TypeScript         |          3 |        180 |          1 |         14 |        195 |
+| JSON               |          2 |         48 |          0 |          2 |         50 |
+| Markdown           |          1 |         40 |          0 |         23 |         63 |
+| PostCSS            |          1 |         13 |          0 |          4 |         17 |
+| JSON with Comments |          1 |          9 |          1 |          1 |         11 |
+| JavaScript         |          1 |          9 |          2 |          2 |         13 |
++--------------------+------------+------------+------------+------------+------------+
+
+Directories
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                    | files      | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                       |         39 |     11,926 |         58 |      2,840 |     14,824 |
+| . (Files)                                                                               |          9 |     10,326 |          4 |      2,627 |     12,957 |
+| .github                                                                                 |          1 |         25 |          0 |         10 |         35 |
+| .github/workflows                                                                       |          1 |         25 |          0 |         10 |         35 |
+| app                                                                                     |         28 |      1,546 |         54 |        202 |      1,802 |
+| app (Files)                                                                             |          3 |        132 |          0 |         22 |        154 |
+| app/assets                                                                              |          1 |         13 |          0 |          4 |         17 |
+| app/assets/css                                                                          |          1 |         13 |          0 |          4 |         17 |
+| app/components                                                                          |         12 |        712 |          6 |         50 |        768 |
+| app/components (Files)                                                                  |          9 |        653 |          6 |         42 |        701 |
+| app/components/OgImage                                                                  |          1 |         27 |          0 |          3 |         30 |
+| app/components/content                                                                  |          2 |         32 |          0 |          5 |         37 |
+| app/layouts                                                                             |          3 |         55 |          0 |         12 |         67 |
+| app/pages                                                                               |          9 |        634 |         48 |        114 |        796 |
+| app/pages (Files)                                                                       |          5 |        430 |         48 |         75 |        553 |
+| app/pages/blog                                                                          |          2 |        123 |          0 |         20 |        143 |
+| app/pages/changelog                                                                     |          1 |         35 |          0 |          7 |         42 |
+| app/pages/docs                                                                          |          1 |         46 |          0 |         12 |         58 |
+| content                                                                                 |          1 |         29 |          0 |          1 |         30 |
++-----------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| filename                                                                                | language           | code       | comment    | blank      | total      |
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+
+| /home/nyll/Development/north-sussex-judo-club/.github/workflows/ci.yml                  | YAML               |         25 |          0 |         10 |         35 |
+| /home/nyll/Development/north-sussex-judo-club/README.md                                 | Markdown           |         40 |          0 |         23 |         63 |
+| /home/nyll/Development/north-sussex-judo-club/app/app.config.ts                         | TypeScript         |          8 |          0 |          1 |          9 |
+| /home/nyll/Development/north-sussex-judo-club/app/app.vue                               | Vue                |         64 |          0 |         10 |         74 |
+| /home/nyll/Development/north-sussex-judo-club/app/assets/css/main.css                   | PostCSS            |         13 |          0 |          4 |         17 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/AppFooter.vue              | Vue                |        116 |          0 |          9 |        125 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/AppHeader.vue              | Vue                |         86 |          6 |         11 |        103 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/AppLogo.vue                | Vue                |         40 |          0 |          1 |         41 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/HeroBackground.vue         | Vue                |         85 |          0 |          4 |         89 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/ImagePlaceholder.vue       | Vue                |          9 |          0 |          1 |         10 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/OgImage/OgImageSaas.vue    | Vue                |         27 |          0 |          3 |         30 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/PriceList.vue              | Vue                |         81 |          0 |          3 |         84 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/PromotionalVideo.vue       | Vue                |         14 |          0 |          1 |         15 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/StarsBg.vue                | Vue                |        173 |          0 |         11 |        184 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/TemplateMenu.vue           | Vue                |         49 |          0 |          1 |         50 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/content/PictureAndText.vue | Vue                |         19 |          0 |          3 |         22 |
+| /home/nyll/Development/north-sussex-judo-club/app/components/content/Pictures.vue       | Vue                |         13 |          0 |          2 |         15 |
+| /home/nyll/Development/north-sussex-judo-club/app/error.vue                             | Vue                |         60 |          0 |         11 |         71 |
+| /home/nyll/Development/north-sussex-judo-club/app/layouts/auth.vue                      | Vue                |         18 |          0 |          2 |         20 |
+| /home/nyll/Development/north-sussex-judo-club/app/layouts/default.vue                   | Vue                |          9 |          0 |          3 |         12 |
+| /home/nyll/Development/north-sussex-judo-club/app/layouts/docs.vue                      | Vue                |         28 |          0 |          7 |         35 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/blog.vue                        | Vue                |          3 |          0 |          1 |          4 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/blog/[slug].vue                 | Vue                |         80 |          0 |         13 |         93 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/blog/index.vue                  | Vue                |         43 |          0 |          7 |         50 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/changelog/index.vue             | Vue                |         35 |          0 |          7 |         42 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/docs/[...slug].vue              | Vue                |         46 |          0 |         12 |         58 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/index.vue                       | Vue                |         53 |         48 |         11 |        112 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/login.vue                       | Vue                |         65 |          0 |         11 |         76 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/pricing.vue                     | Vue                |        239 |          0 |         38 |        277 |
+| /home/nyll/Development/north-sussex-judo-club/app/pages/signup.vue                      | Vue                |         70 |          0 |         14 |         84 |
+| /home/nyll/Development/north-sussex-judo-club/content.config.ts                         | TypeScript         |        139 |          0 |          7 |        146 |
+| /home/nyll/Development/north-sussex-judo-club/content/0.index.yml                       | YAML               |         29 |          0 |          1 |         30 |
+| /home/nyll/Development/north-sussex-judo-club/eslint.config.mjs                         | JavaScript         |          9 |          2 |          2 |         13 |
+| /home/nyll/Development/north-sussex-judo-club/nuxt.config.ts                            | TypeScript         |         33 |          1 |          6 |         40 |
+| /home/nyll/Development/north-sussex-judo-club/package.json                              | JSON               |         35 |          0 |          1 |         36 |
+| /home/nyll/Development/north-sussex-judo-club/pnpm-lock.yaml                            | YAML               |     10,039 |          0 |      2,584 |     12,623 |
+| /home/nyll/Development/north-sussex-judo-club/pnpm-workspace.yaml                       | YAML               |          9 |          0 |          2 |         11 |
+| /home/nyll/Development/north-sussex-judo-club/renovate.json                             | JSON               |         13 |          0 |          1 |         14 |
+| /home/nyll/Development/north-sussex-judo-club/tsconfig.json                             | JSON with Comments |          9 |          1 |          1 |         11 |
+| Total                                                                                   |                    |     11,926 |         58 |      2,840 |     14,824 |
++-----------------------------------------------------------------------------------------+--------------------+------------+------------+------------+------------+

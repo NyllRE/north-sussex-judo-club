@@ -1,0 +1,30 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "client: chrome",
+      "url": "http://localhost:3000",
+      "runtimeExecutable": "/var/lib/flatpak/app/com.google.Chrome/x86_64/stable/b7f5406e0babf91736193e1f1964a43c8c4a820b06c0023d02bd41d1a3195eae/export/bin/com.google.Chrome",
+      // this should point to your Nuxt `srcDir`, which is `app` by default
+      "webRoot": "${workspaceFolder}/app"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "server: nuxt",
+      "outputCapture": "std",
+      "program": "${workspaceFolder}/node_modules/nuxt/bin/nuxt.mjs",
+      "args": ["dev"]
+    }
+  ],
+  "compounds": [
+    {
+      "name": "fullstack: nuxt",
+      "configurations": ["server: nuxt", "client: chrome"]
+    }
+  ]
+}
